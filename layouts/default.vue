@@ -1,19 +1,18 @@
 <template>
-    <div>
-        <Header></Header>
-        <main>
-             <Nuxt />
-        </main>
-
-    </div>
+  <div>
+    <Header></Header>
+    <main>
+      <Nuxt />
+    </main>
+  </div>
 </template>
 
 <script>
-    import Header from '@/components/generic/Header.vue'
-    export default {
-        name: 'DefaultLayout',
-        components: {
-            Header,
-        }
-    }
+import Header from '@/components/sections/Header.vue'
+export default {
+  name: 'DefaultLayout',
+  components: {
+    Header,
+  },
+}
 </script>

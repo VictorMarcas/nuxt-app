@@ -1,20 +1,36 @@
 <template>
   <div class="container mx-auto">
-    <div aria-label="hero" class="flex items-center">
-      <div>
-        <h3>Most Awaited <br> Winter Sale <br> Is Here</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque magnam magni laboriosam deleniti voluptatem corporis qui deserunt illum, officia voluptate odio similique commodi assumenda recusandae voluptates impedit rem. Ex, unde?</p>
+    <div aria-label="hero" class="flex items-center px-12">
+      <div class="mr-auto">
+        <div class="w-full max-w-sm">
+          <h1
+            class="text-6xl font-bold leading-none text-gray-800 font-montserrat-alt"
+          >
+            <span class="text-2xl text-gray-400">Data que enriquese</span>
+            <br />
+            tu negocio
+          </h1>
+          <p class="mt-12 text-base font-light leading-loose text-gray-500">
+            Hacemos que la validación de datos sea fácil y accesible para todos,
+            para que puedas asegurar tus transacciones y agregar valor a tu
+            negocio.
+          </p>
+        </div>
       </div>
       <div>
-        <div class="w-96 h-96 rounded-full relative bg-gray-50"></div>
+        <SigninBox></SigninBox>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'IndexPage',
-    layout: 'DefaultLayout',
-  }
+import SigninBox from '@/components/sections/SignInBox.vue'
+export default {
+  name: 'IndexPage',
+  components: {
+    SigninBox,
+  },
+  layout: 'DefaultLayout',
+}
 </script>

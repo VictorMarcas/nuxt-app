@@ -16,9 +16,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '@/assets/css/main.css',
-  ],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -30,28 +28,33 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    // https://google-fonts.nuxtjs.org/
-    '@nuxtjs/google-fonts',
     // tailwindcss
     '@nuxt/postcss8',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts',
   ],
 
   // Google Font config
   googleFonts: {
     families: {
       Manrope: {
-        weights: [300, 400, 700],
-      }
+        wght: [300, 400, 700, 800],
+      },
+      'Montserrat+Alternates': {
+        wght: [700],
+      },
     },
     display: 'swap',
     prefetch: true,
+    preload: true,
+    download: true,
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
   ],
   // Router config
   router: {
@@ -73,4 +76,6 @@ export default {
       },
     },
   },
+
+  eslint: { cache: false },
 }

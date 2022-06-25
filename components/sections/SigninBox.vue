@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      alert(this.form)
+      console.log(this.form) /* eslint-disable-line no-console */
     },
   },
 }

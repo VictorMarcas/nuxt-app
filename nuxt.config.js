@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: true,
   head: {
-    title: 'first-app-nuxt',
+    title: 'Enterprise',
     htmlAttrs: {
       lang: 'es',
     },
@@ -32,6 +32,7 @@ export default {
     '@nuxt/postcss8',
     // https://google-fonts.nuxtjs.org/
     '@nuxtjs/google-fonts',
+    '@nuxt/image',
   ],
 
   // Google Font config
@@ -55,6 +56,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
+    '@nuxt/image',
   ],
   // Router config
   router: {

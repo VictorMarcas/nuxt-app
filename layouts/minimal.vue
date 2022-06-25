@@ -1,6 +1,8 @@
 <template>
-    <div class="h-screen w-full bg-gray-100 grid place-items-center">
-        <nuxt />
+    <div class="w-full h-screen">
+        <div class="container h-full px-12 mx-auto">
+            <nuxt />
+        </div>
     </div>
 </template>
 

@@ -3,7 +3,8 @@
     <div class="container mx-auto">
       <div class="flex items-center py-16">
         <NuxtLink to="/" class="mr-12">
-          <Logo />
+          <!-- <Logo /> -->
+          <span class="text-lg text-gray-900 font-montserrat-alt">Enterprise</span>
         </NuxtLink>
         <Navigation />
         <div class="ml-auto">
@@ -39,7 +40,7 @@ export default {
   name: 'Header',
   components: {
     Navigation,
-    Logo: () => import('@/components/shared/Logo.vue'),
+    // Logo: () => import('@/components/shared/Logo.vue'),
   },
 }
 </script>

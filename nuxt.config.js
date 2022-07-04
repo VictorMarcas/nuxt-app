@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: true,
@@ -14,6 +16,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+
+  env: {
+    maintenance: process.env.MAINTENANCE_MODE,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -61,6 +67,7 @@ export default {
   ],
   // Router config
   router: {
+    middleware: ['maintenance'],
     prefetchLinks: false,
   },
 

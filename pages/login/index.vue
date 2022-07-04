@@ -52,10 +52,12 @@
     </div>
     <div class="pl-10">
       <nuxt-img
-        format="webp"
         class="w-full max-w-none"
         width="448"
         height="448"
+        format="webp"
+        provider="static"
+        quality="80"
         src="/images/pages/undraw_access_account.png"
       />
     </div>

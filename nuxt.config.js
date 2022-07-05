@@ -68,7 +68,7 @@ export default {
   ],
   // Router config
   router: {
-    middleware: ['maintenance'],
+    middleware: ['auth', 'maintenance'],
     prefetchLinks: false,
   },
 
@@ -87,10 +87,5 @@ export default {
       },
     },
   },
-
-  serverMiddleware: [
-    { path: '/api/auth', handler: '~/server-middleware/auth.js' }
-  ],
-
   eslint: { cache: false },
 }

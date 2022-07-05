@@ -61,6 +61,7 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex'
 import Input from '@/components/ui/Input.vue'
 import Button from '@/components/ui/button/Button.vue'
 import ButtonLink from '@/components/ui/button/ButtonLink.vue'
@@ -82,8 +83,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions('auth', ['register']),
     handleSubmit() {
-      console.log(this.form) /* eslint-disable-line no-console */
+      this.register(this.form)
     },
   },
 }

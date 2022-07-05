@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: true,
@@ -17,8 +15,11 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
-
-  env: {
+  publicRuntimeConfig: {
+    supabaseAnonKey: process.env.SUPABASE_ANON_KEY,
+    supabaseBaseUrl: process.env.SUPABASE_BASE_URL,
+  },
+  privateRuntimeConfig: {
     maintenance: process.env.MAINTENANCE_MODE,
   },
 
@@ -26,7 +27,7 @@ export default {
   css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['@/plugins/supabase.client.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: false,
@@ -62,7 +63,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
+    // '@nuxtjs/auth-next',
     '@nuxt/image',
   ],
   // Router config
@@ -86,6 +87,10 @@ export default {
       },
     },
   },
+
+  serverMiddleware: [
+    { path: '/api/auth', handler: '~/server-middleware/auth.js' }
+  ],
 
   eslint: { cache: false },
 }

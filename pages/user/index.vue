@@ -6,8 +6,12 @@
 
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         name: 'UserPage',
-        middleware: 'auth'
+        middleware: 'auth',
+        computed: {
+            ...mapState('auth', ['user'])
+        }
     }
 </script>
